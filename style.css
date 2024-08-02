@@ -3,8 +3,9 @@ div.gallery {
     border: 1px solid #ccc;
     float: left;
     width: 180px;
+    transition: width 2s, height 2s;
 }
-  
+
 div.gallery:hover {
     width: 300px;
     height: auto;
@@ -13,7 +14,6 @@ div.gallery:hover {
 div.gallery img {
     width: 100%;
     height: auto;
-    transition: width 2s, height 2s;
 }
   
 div.desc {
@@ -23,7 +23,9 @@ div.desc {
 
 .photos {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     margin: 10%;
     margin-top: 0;
     border: 1px solid black;
@@ -47,7 +49,7 @@ div.desc {
     margin-bottom: 15px;
 }
   
-  /* The close button */
+/* The close button */
 .closebtn {
     margin-left: 15px;
     color: white;
@@ -59,7 +61,7 @@ div.desc {
     transition: 0.3s;
 }
   
-  /* When moving the mouse over the close button */
+/* When moving the mouse over the close button */
 .closebtn:hover {
     color: black;
 }
