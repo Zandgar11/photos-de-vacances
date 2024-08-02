@@ -1,0 +1,69 @@
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+  
+div.gallery:hover {
+    width: 300px;
+    height: auto;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+    transition: width 2s, height 2s;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.photos {
+    display: flex;
+    align-items: center;
+    margin: 10%;
+    margin-top: 0;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.jour {
+    text-align: center;
+    border: 1px solid black;
+    margin: 10%;
+    padding: 10px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+  
+  /* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+  /* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
