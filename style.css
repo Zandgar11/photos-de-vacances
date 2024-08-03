@@ -1,37 +1,82 @@
+:root {
+    --bg-color-light: #fafafa;
+    --text-color-light: #333333;
+    --accent-color-light: #ffb6c1; /* Light Pink Pastel */
+    --header-bg-light: #ffefd5;   /* Papaya Whip */
+
+    --bg-color-dark: #2e2e2e;
+    --text-color-dark: #d3d3d3;
+    --accent-color-dark: #d8bfd8; /* Thistle */
+    --header-bg-dark: #4b0082;   /* Indigo */
+}
+
 body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
     transition: background-color 0.5s, color 0.5s;
 }
 
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
 }
 
+/* Elements styling */
+header {
+    background-color: var(--header-bg-light);
+    transition: background-color 0.5s;
+}
+
+body.dark-mode header {
+    background-color: var(--header-bg-dark);
+}
+
+.alert {
+    background-color: var(--accent-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode .alert {
+    background-color: var(--accent-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Dark mode button */
 #darkModeButton {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffffff;
+    background-color: var(--accent-color-light);
     border: none;
     border-radius: 50%;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 24px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.5s;
 }
 
 #darkModeButton:hover {
     transform: scale(1.1);
 }
 
+body.dark-mode #darkModeButton {
+    background-color: var(--accent-color-dark);
+}
+
+/* Wave animation */
 .wave {
     position: fixed;
     border-radius: 50%;
-    background: #121212;
+    background: var(--bg-color-dark);
     animation: waveAnimation 1s ease-out;
     pointer-events: none;
     z-index: 9999;
+}
+
+body.dark-mode .wave {
+    background: var(--bg-color-light);
 }
 
 @keyframes waveAnimation {
@@ -85,6 +130,11 @@ div.desc {
     border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
+    transition: border-color 0.5s;
+}
+
+body.dark-mode .photos {
+    border-color: var(--text-color-dark);
 }
 
 .jour {
@@ -94,12 +144,15 @@ div.desc {
     padding: 10px;
     margin-bottom: 2px;
     border-radius: 10px;
+    transition: border-color 0.5s;
+}
+
+body.dark-mode .jour {
+    border-color: var(--text-color-dark);
 }
 
 .alert {
     padding: 20px;
-    background-color: #f44336; /* Red */
-    color: white;
     margin-bottom: 15px;
 }
 
