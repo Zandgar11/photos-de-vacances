@@ -29,20 +29,25 @@ body.dark-mode {
     position: fixed;
     border-radius: 50%;
     background: #121212;
-    animation: waveAnimation 0.5s ease-out;
+    animation: waveAnimation 1s ease-out;
     pointer-events: none;
     z-index: 9999;
 }
 
 @keyframes waveAnimation {
-    from {
+    0% {
         width: 0;
         height: 0;
         opacity: 0.8;
     }
-    to {
+    50% {
         width: 2000px;
         height: 2000px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 0;
+        height: 0;
         opacity: 0;
     }
 }
