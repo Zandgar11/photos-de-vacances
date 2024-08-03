@@ -1,13 +1,13 @@
 :root {
-    --bg-color-light: #fafafa;
-    --text-color-light: #333333;
-    --accent-color-light: #ffb6c1; /* Light Pink Pastel */
-    --header-bg-light: #ffefd5;   /* Papaya Whip */
+    --bg-color-light: #E6E6FA;      /* Light Lavender */
+    --text-color-light: #333333;    /* Dark Gray */
+    --accent-color-light: #98FB98;  /* Pale Green */
+    --header-bg-light: #FFFDD0;     /* Cream Yellow */
 
-    --bg-color-dark: #2e2e2e;
-    --text-color-dark: #d3d3d3;
-    --accent-color-dark: #d8bfd8; /* Thistle */
-    --header-bg-dark: #4b0082;   /* Indigo */
+    --bg-color-dark: #2F4F4F;       /* Dark Gray */
+    --text-color-dark: #F5F5F5;     /* Off White */
+    --accent-color-dark: #8FBC8F;   /* Sage Green */
+    --header-bg-dark: #191970;      /* Midnight Blue */
 }
 
 body {
