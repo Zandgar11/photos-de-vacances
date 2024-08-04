@@ -20,3 +20,5 @@ document.querySelectorAll('.sidebar ul li').forEach(item => {
         });
     });
 });
+
+// Assurez-vous que le code est placé dans script.js ou directement dans un <script> en bas de la page HTML
