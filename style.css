@@ -40,27 +40,19 @@ body.dark-mode header {
 body.dark-mode .alert {
     background-color: var(--accent-color-dark);
     color: var(--text-color-dark);
-    opacity: 0;
-    transform: scale(0.9);
-}
-
-.alert {
-    transition: opacity 0.5s, transform 0.5s;
 }
 
 .alert {
     padding: 20px;
     margin-bottom: 15px;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .alert.hidden {
     opacity: 0;
     transform: scale(0.9);
-}
-
-.alert:not(.hidden) {
-    opacity: 1;
-    transform: scale(1);
 }
 
 /* Sidebar styling */
@@ -186,8 +178,9 @@ div.desc {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 10%;
-    margin-top: 0;
+    margin-left: 220px; /* Adjusted to make room for the sidebar */
+    margin-right: 10%;
+    margin-top: 10px;
     border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
@@ -201,7 +194,8 @@ body.dark-mode .photos {
 .jour {
     text-align: center;
     border: 1px solid black;
-    margin: 10%;
+    margin-left: 220px; /* Adjusted to make room for the sidebar */
+    margin-right: 10%;
     padding: 10px;
     margin-bottom: 2px;
     border-radius: 10px;
