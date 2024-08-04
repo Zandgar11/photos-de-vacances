@@ -25,8 +25,6 @@ body.dark-mode {
 header {
     background-color: var(--header-bg-light);
     transition: background-color 0.5s;
-    text-align: center;
-    padding: 5%;
 }
 
 body.dark-mode header {
@@ -42,6 +40,67 @@ body.dark-mode header {
 body.dark-mode .alert {
     background-color: var(--accent-color-dark);
     color: var(--text-color-dark);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.alert {
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.alert {
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.alert.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.alert:not(.hidden) {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    background-color: var(--header-bg-light);
+    padding: 20px;
+    width: 200px;
+    height: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: background-color 0.5s;
+}
+
+body.dark-mode .sidebar {
+    background-color: var(--header-bg-dark);
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--accent-color-light);
+}
+
+body.dark-mode .sidebar ul li:hover {
+    background-color: var(--accent-color-dark);
 }
 
 /* Dark mode button */
@@ -151,11 +210,6 @@ body.dark-mode .photos {
 
 body.dark-mode .jour {
     border-color: var(--text-color-dark);
-}
-
-.alert {
-    padding: 20px;
-    margin-bottom: 15px;
 }
 
 /* The close button */

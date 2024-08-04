@@ -18,3 +18,26 @@ document.getElementById('darkModeButton').addEventListener('click', function(e) 
         wave.remove();
     });
 });
+
+// Handle alert close button
+document.querySelector('.closebtn').addEventListener('click', function() {
+    const alertBox = this.parentElement;
+    alertBox.classList.add('hidden');
+    setTimeout(() => {
+        alertBox.style.display = 'none';
+    }, 500);
+});
+
+// Handle sidebar person selection
+document.querySelectorAll('.sidebar ul li').forEach(item => {
+    item.addEventListener('click', function() {
+        const person = this.getAttribute('data-person');
+        document.querySelectorAll('.photos .gallery').forEach(gallery => {
+            if (gallery.classList.contains(person)) {
+                gallery.style.display = 'block';
+            } else {
+                gallery.style.display = 'none';
+            }
+        });
+    });
+});
