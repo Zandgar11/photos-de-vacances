@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
         
         button.appendChild(wave);
         
-        // Supprimer l'onde après l'animation
+        // Attendre la fin de l'animation pour changer le mode sombre
         wave.addEventListener('animationend', function () {
             wave.remove();
+            document.body.classList.toggle('dark-mode'); // Bascule le mode sombre après l'animation
         });
     });
 });
